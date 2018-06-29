@@ -427,3 +427,22 @@ border-left: solid 5px #7db4e6;/*左線*/
 .share-buttons .inner .pocket-button:active{
     background: #b5392c;
 }
+
+
+
+
+ /*ナビゲーションの色*/
+.main-navigation,
+.main-navigation ul ul {
+  background-color: #ffffff;/* 背景色 */
+  border-top: 3px solid #000000;/* 上の線 */
+  border-bottom: 3px solid #000000;/* 下の線*/
+}
+main-navigation,
+.main-navigation a {
+  color: #000000;; /* 文字色 */
+  font-size: 14px ;/* 文字の大きさ */
+}
+.main-navigation a:hover {
+    color: #009416; /* マウスオーバー時の文字色 */
+}
