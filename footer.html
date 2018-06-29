@@ -1,0 +1,52 @@
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+
+
+
+<!--サイドバー固定-->
+<!--jQuery-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+$(window).load(function() {
+var sideLast = $(".hatena-module").filter(":last");
+var sideLastTop = sideLast.offset().top + 350;
+var sideLastWidth = sideLast.width();
+var win = $(window);
+
+win.scroll(function(){
+if(win.scrollTop() > sideLastTop) {
+sideLast.css("position",'fixed');
+sideLast.css("top",'20px');
+sideLast.css("width",sideLastWidth);
+}else{
+sideLast.css("position",'relative');
+};
+});
+});
+</script>
