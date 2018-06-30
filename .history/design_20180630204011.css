@@ -41,17 +41,14 @@ body{background:#f5f5f5;}
 
 
 /*箇条書き*/
-.entry-content ol {
-    color: #1e366a;
-    border: dotted #1e366a 1px;/*ドット 色 太さ*/
-    padding: 0.5em 0.5em 0.5em 2em;
+li {
+  list-style: square outside;
+  color: #494949;
+  list-style-image: none;
 }
-
-.entry-content ol li {
-    line-height: 1.5;
-    padding: 0.5em 0;
+li span {
+  color: #494949;
 }
-
 
 
 
@@ -193,25 +190,6 @@ border-left: solid 5px #7db4e6;/*左線*/
     font-size:16px;
     padding-left:5px;
 }
-.sidebar-follow-buttons .facebook {
-    color: #305097;
-    border: 1px solid #305097;
-    background: #ffffff;
-}
-.sidebar-follow-buttons .facebook:hover:after {
-    top:0;
-    background:#305097;
-}
-.sidebar-follow-buttons .twitter {
-    color: #55acee;
-    border: 1px solid #55acee;
-    background: #ffffff;
-}
-.sidebar-follow-buttons .twitter:hover:after {
-    top:0;
-    background:#55acee;
-}
-/* はてなはいらない 
 .sidebar-follow-buttons .hatena {
     color: #38393C;
     border: 1px solid #38393C;
@@ -226,7 +204,13 @@ border-left: solid 5px #7db4e6;/*左線*/
     border: 1px solid #305097;
     background: #ffffff;
 }
-*/
+.sidebar-follow-buttons .facebook:hover:after {
+    top:0;
+    background:#305097;
+}
+
+
+
 
 
 /* ページトップへ戻るボタン */
@@ -355,7 +339,7 @@ border-left: solid 5px #7db4e6;/*左線*/
 	}
 }
 .q_boy::after {background-image:url(https://cdn-ak.f.st-hatena.com/images/fotolife/m/munemakun/20180629/20180629003354.png?1530200179);}
-.q_panda::after {background-image:url(https://cdn-ak.f.st-hatena.com/images/fotolife/m/munemakun/20180629/20180629004008_120.jpg?1530200412);}
+.a_panda::after {background-image:url(https://cdn-ak.f.st-hatena.com/images/fotolife/m/munemakun/20180629/20180629004008_120.jpg?1530200412);}
 
 
 
@@ -461,49 +445,4 @@ main-navigation,
 }
 .main-navigation a:hover {
     color: #009416; /* マウスオーバー時の文字色 */
-}
-
-
-
-
-
-/* 目次のカスタマイズ */
-.entry-content .table-of-contents {
- position:relative;
- border: 3px solid #707070; /* 枠の色はここを変更してください */
- background-color: #FFF; /* 背景カラーです */
- border-radius: 0px 0px 5px 5px;
- margin-top: 3em; /* 各々の環境で数字を調節してください */
-}
-.table-of-contents:after { /* 目次部分 */
- position: absolute;
- font-family: FontAwesome;
- content: '\f03a 目次'; /* 表示名を変えたければここを変更 */
- background: #707070;
- color: #fff;
- right: 0%;
- left: 0%;
- bottom: 100%;
- border-radius: 5px 5px 0 0;
- padding: 2px 0 2px 0;
- margin: 0 -3px 0 -3px;/* -で指定しているところはborderと同じ数値にする */
- text-align:center;
- font-size: 1.2em;
- letter-spacing: 2em
- }
-.table-of-contents li {
- font-size:0.9em;
- font-weight: bold;
- color:#333;
-}
-.table-of-contents a{
- color:#545454;
- padding:8px 0;/* 列の間隔 */
- display: block;
- text-decoration: none;
- transition-duration: 0.3s /* カーソルが戻る時間 */
-}
-.table-of-contents li a:hover {
- padding-left: 7px; /* カーソル重ねた時に移動する距離 */
- transition-duration: 0.3s /* カーソルが移動する時間 */
 }
