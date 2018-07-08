@@ -6,8 +6,30 @@
 body{background:#f5f5f5;}
 /* </system> */
 
+.box2 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #555555;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}
 
-
+ul.box{
+  background: #fffcf4;
+  border-radius :8px;/*角の丸み*/
+  box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
+  padding: 0.5em 0.5em 0.5em 2em;
+}
+ul.box li{
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
 
 /*タイトル*/
 .entry-title {
@@ -506,4 +528,96 @@ main-navigation,
 .table-of-contents li a:hover {
  padding-left: 7px; /* カーソル重ねた時に移動する距離 */
  transition-duration: 0.3s /* カーソルが移動する時間 */
+}
+
+
+pre.code{
+    margin: 0 0 1.5em 0;
+    padding: 1.6em 1em 1em;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    position: relative;
+}
+pre.code{
+    margin: 0 0 1.5em 0;
+    padding: 1.6em 1em 1em;
+    background: #333;
+    color: #eee;
+    position: relative;
+    border-radius: 0;
+}
+pre.code::before{
+    content: attr(data-lang);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #666;
+    padding: 0 0.8em;
+}
+pre.lang-html::before{
+    background: #00796b;
+    color: #e0f2f1;
+}
+pre.lang-css::before{
+    background: #ffa000;
+    color: #fff8e1;
+}
+
+
+
+
+/* 表のカスタマイズ */
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+}
+.bordered th{
+    background:#8EB8FF;
+}
+th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+ 
+th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+.bordered tr:hover
+{
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+$('.bordered tr').mouseover(function(){
+    $(this).addClass('highlight');
+}).mouseout(function(){
+    $(this).removeClass('highlight');
+});
+.highlight
+{
+  background: #fbf8e9;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+$(".zebra tr:even").addClass('alternate');
+.alternate {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
 }
